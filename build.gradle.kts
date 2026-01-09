@@ -16,7 +16,7 @@ submission {
     // studentId = "ab12cdef"
     // firstName = "sol_first"
     // lastName = "sol_last"
-    studentId = ""
+    studentId = "ab12cdef"
     firstName = ""
     lastName = ""
 
@@ -24,14 +24,15 @@ submission {
     requireTests = false
 }
 
-dependencies {
-    implementation(libs.fopbot)
-}
-
-tasks {
-    withType<GraderRunTask> {
-        doFirst {
-            throw GradleException("No public tests are provided for this exercise. For more information, please refer to the Moodle section 'Übungen' -> 'Informationen zu Tests'.")
+jagr {
+    graders {
+        val graderPublic by getting {
+            rubricProviderName.set("h13.H13_RubricProviderPublic")
         }
     }
+}
+
+tasks.run.configure {
+    // make sure files can be accessed with same path as IntelliJ run
+    workingDir = projectDir
 }
