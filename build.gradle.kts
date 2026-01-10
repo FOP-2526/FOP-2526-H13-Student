@@ -16,7 +16,7 @@ submission {
     // studentId = "ab12cdef"
     // firstName = "sol_first"
     // lastName = "sol_last"
-    studentId = "ab12cdef"
+    studentId = ""
     firstName = ""
     lastName = ""
 
