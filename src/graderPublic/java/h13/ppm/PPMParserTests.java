@@ -75,7 +75,7 @@ public class PPMParserTests {
     @Tag("H13.1.1")
     @Test
     public void parseHeaderWrongMaxColorTest() {
-        PPMImageData image = new PPMImageData(3, 2, "P3 3 2 200 ".getBytes(), new byte[0]);
+        PPMImageData image = new PPMImageData(3, 2, "P6 3 2 200 ".getBytes(), new byte[0]);
         Context context = image.getContext();
         PPMParser parser = createParser(image.header());
 
