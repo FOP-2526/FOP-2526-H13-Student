@@ -45,7 +45,7 @@ public class PPMImagesWriteTest {
                 r -> "The header was not written in full to the output."
             );
         } catch (Exception e) {
-            fail(emptyContext(), r -> "An unexpected exception was thrown, even though none should have been thrown.");
+            fail(e, emptyContext(), r -> "An unexpected exception was thrown, even though none should have been thrown.");
         }
     }
 
@@ -93,8 +93,8 @@ public class PPMImagesWriteTest {
                     r -> "Byte at index " + index + " must match"
                 );
             }
-        } catch (Exception e){
-            fail(emptyContext(), r -> "An unexpected exception was thrown, even though none should have been thrown.");
+        } catch (Exception e) {
+            fail(e, emptyContext(), r -> "An unexpected exception was thrown, even though none should have been thrown.");
         }
     }
 
