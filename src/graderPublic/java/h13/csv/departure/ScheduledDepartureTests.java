@@ -35,7 +35,7 @@ public class ScheduledDepartureTests {
     @ParameterizedTest
     @ValueSource(ints = {0, 1, 2, 3, 5, 6, 7, 8})
     public void testDeserialize_incorrectSize(int size) {
-        List<String> row = IntStream.rangeClosed(0, size)
+        List<String> row = IntStream.rangeClosed(1, size)
             .mapToObj(i -> "" + i)
             .toList();
         Context context = contextBuilder()
